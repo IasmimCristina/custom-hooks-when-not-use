@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { CatProvider } from './context/CatContext';
 import Header from './components/Header';
-import CatList from './components/CatList';
+import  { TotallyDifferentCatList, CatList } from './components/CatList';
 import Modal from './components/Modal';
 import Main from './components/Main';
 import AppWrapper from './AppWrapper'; 
@@ -19,6 +19,7 @@ const App = () => {
           <Main>
             <button onClick={() => setIsModalOpen(true)}>Add Cat</button>
             <CatList />
+            <TotallyDifferentCatList/>
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
           </Main>
         </CatProvider>
