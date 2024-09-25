@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import useCat from "../hooks/useCat";
+import useCatList from "../hooks/useCatList";
 
 const Modal = ({ isOpen, onClose }) => {
-  const { addCat } = useCat();
+  const { addCat } = useCatList();
   const [form, setForm] = useState({ breed: "", image: "", country: "" });
 
   const handleImageChange = (e) => {
