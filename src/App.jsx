@@ -1,30 +1,30 @@
-import { useEffect, useState } from "react";
-import { useCustomHook } from "./hooks/useCustomHook";
+import React, { useState } from 'react';
+import { ThemeProvider } from './context/ThemeContext';
+import { CatProvider } from './context/CatContext';
+import Header from './components/Header';
+import CatList from './components/CatList';
+import Modal from './components/Modal';
+import Main from './components/Main';
+import AppWrapper from './AppWrapper'; 
+import './App.css';
 
-function App() {
-  const { count, setCount, text, setText, memoizedValue } = useCustomHook();
-  const [renders, setRenders] = useState(1);
-
-  useEffect(() => {
-    //   Apenas no render
-    console.log(`Rendered ${renders} times`);
-    setRenders((prev) => prev + 1);
-  }, [count, text]);
+const App = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div>
-      <h1>Memoization Test</h1>
-      <p>Count: {count}</p>
-      <p>Memoized Value (count * 2): {memoizedValue}</p>
-      <p>Renders: {renders}</p>
-      <button onClick={() => setCount(count + 1)}>Increment Count</button>
-      <input
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Type something"
-      />
-    </div>
+    <ThemeProvider>
+      <AppWrapper> 
+        <CatProvider>
+          <Header />
+          <Main>
+            <button onClick={() => setIsModalOpen(true)}>Add Cat</button>
+            <CatList />
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          </Main>
+        </CatProvider>
+      </AppWrapper>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
