@@ -8,6 +8,7 @@ const CatList = () => {
   console.log("CatList rendered!");
   return (
     <div className="cat-list">
+      <h2>First list</h2>
       {cats.map((cat) => (
         <CatCard
           key={cat.id}
