@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import { useCustomHook } from "./useCustomHook";
+import { useCustomHook } from "./hooks/useCustomHook";
 
 function App() {
   const { count, setCount, text, setText, memoizedValue } = useCustomHook();
   const [renders, setRenders] = useState(1);
 
   useEffect(() => {
+    //   Apenas no render
     console.log(`Rendered ${renders} times`);
     setRenders((prev) => prev + 1);
-  });
+  }, [count, text]);
 
   return (
     <div>
