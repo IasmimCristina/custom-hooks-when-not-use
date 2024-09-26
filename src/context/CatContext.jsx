@@ -1,6 +1,6 @@
 import React, { createContext, useMemo, useState, useEffect } from "react";
 
-// Importando imagens locais (novos gatos)
+// Cats list images
 import siameseImage from "../assets/images/siamese.avif";
 import persianImage from "../assets/images/persian.avif";
 import maineCoonImage from "../assets/images/maine_coon.avif";
@@ -22,10 +22,52 @@ export const CatProvider = ({ children }) => {
       country: "Thailand",
     },
     {
+      id: "persian-1672534900000",
+      breed: "Persian",
+      image: persianImage,
+      country: "Iran",
+    },
+    {
       id: "maine-coon-1672535000000",
       breed: "Maine Coon",
       image: maineCoonImage,
       country: "USA",
+    },
+    {
+      id: "sphynx-1672535100000",
+      breed: "Sphynx",
+      image: sphynxImage,
+      country: "Canada",
+    },
+    {
+      id: "bengal-1672535200000",
+      breed: "Bengal",
+      image: bengalImage,
+      country: "USA",
+    },
+    {
+      id: "russian-blue-1672535300000",
+      breed: "Russian Blue",
+      image: russianBlueImage,
+      country: "Russia",
+    },
+    {
+      id: "british-shorthair-1672535400000",
+      breed: "British Shorthair",
+      image: britishShorthairImage,
+      country: "United Kingdom",
+    },
+    {
+      id: "ragdoll-1672535500000",
+      breed: "Ragdoll",
+      image: ragdollImage,
+      country: "USA",
+    },
+    {
+      id: "abyssinian-1672535600000",
+      breed: "Abyssinian",
+      image: abyssinianImage,
+      country: "Ethiopia",
     },
   ];
 
