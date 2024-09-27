@@ -4,6 +4,7 @@ import ThemeToggleButton from "./ThemeToggleButton";
 const Header = () => {
   console.log("Header rendered!");
 
+  console.log('Header rendered!');
   return (
     <header className="header">
       <h1>CatApp</h1>
