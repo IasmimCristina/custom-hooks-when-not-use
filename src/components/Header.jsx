@@ -5,6 +5,7 @@ import useTheme from '../hooks/useTheme';
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
+  console.log('Header rendered!');
   return (
     <header className="header">
       <h1>CatApp</h1>

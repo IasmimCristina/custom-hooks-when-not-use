@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const CatCard = ({ breed, image, country }) => {
+  console.log('CatCard rendered!');
   return (
     <div className="cat-card">
       <img src={image} alt={breed} />
