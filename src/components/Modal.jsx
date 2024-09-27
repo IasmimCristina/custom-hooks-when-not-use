@@ -5,6 +5,7 @@ const Modal = ({ isOpen, onClose }) => {
   const { addCat } = useCatList();
   const [form, setForm] = useState({ breed: "", image: "", country: "" });
 
+  console.log("Modal rendered!")
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {

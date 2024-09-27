@@ -5,6 +5,7 @@ import CatCard from "./CatCard";
 const CatList = () => {
   const { cats } = useCatList();
 
+  console.log("CatList rendered!");
   return (
     <div className="cat-list">
       {cats.map((cat) => (
