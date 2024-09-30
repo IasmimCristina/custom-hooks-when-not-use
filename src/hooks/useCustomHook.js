@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-
+// Below is just a generic example of a cusotm hook using useMemo!
 export const useCustomHook = () => {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");

@@ -1,19 +1,27 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useMemo, useState, useEffect } from "react";
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light');
-// está faltando amensagem de erro que alerta quando o provicer e=bnao está sendo wrapped poois asism nao funcioanria
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const value = useMemo(
+    () => ({
+      theme,
+      setTheme,
+    }),
+    [theme]
+  );
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={theme}>
-        {children}
-      </div>
+    <ThemeContext.Provider value={value}>
+      <div className={theme}>{children}</div>
     </ThemeContext.Provider>
   );
 };
