@@ -1,4 +1,4 @@
-# Application with practical example of how to avoid cusotm hooks problems;
+# Application with a practical example of how to avoid custom hooks problems;
 
 ## Application
 
