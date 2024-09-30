@@ -1,20 +1,9 @@
-import React, { createContext, useState } from "react";
-
-// Importing cats
-import siameseImage from "../assets/images/siamese.avif";
+import { useContext, useState } from 'react';
+import { CatContext } from '../context/CatContext';
 import maineCoonImage from "../assets/images/maine_coon.avif";
-import persianImage from "../assets/images/persian.avif";
-import sphynxImage from "../assets/images/sphynx.avif";
-import bengalImage from "../assets/images/bengal.avif";
-import russianBlueImage from "../assets/images/russian_blue.avif";
-import britishShorthairImage from "../assets/images/british_shorthair.avif";
-import ragdollImage from "../assets/images/ragdoll.avif";
-import abyssinianImage from "../assets/images/abyssinian.avif";
+import siameseImage from "../assets/images/siamese.avif";
 
-// NOT USED YET!
-export const CatContext = createContext();
-
-export const CatProvider = ({ children }) => {
+const useCatList = () => {
   const initialCats = [
     {
       id: "maine-coon-1672535000000",
@@ -27,12 +16,6 @@ export const CatProvider = ({ children }) => {
       breed: "Siamese",
       image: siameseImage,
       country: "Thailand",
-    },
-    {
-      id: "persian-1672534900000",
-      breed: "Persian",
-      image: persianImage,
-      country: "Iran",
     },
     // {
     //   id: "sphynx-1672535100000",
@@ -79,12 +62,11 @@ export const CatProvider = ({ children }) => {
       ...cat,
       id: `${cat.breed.toLowerCase()}-${Date.now()}`,
     };
-    setCats([...cats, newCatWithId]);
+    setCats((prevCats) => [...prevCats, newCatWithId]);
+
   };
 
-  return (
-    <CatContext.Provider value={{ cats, addCat }}>
-      {children}
-    </CatContext.Provider>
-  );
+  return { cats, addCat };
 };
+
+export default useCatList;

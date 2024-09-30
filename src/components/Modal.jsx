@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useCat from "../hooks/useCat";
+import useCat from "../hooks/useCatList";
 
 const Modal = ({ isOpen, onClose }) => {
   const { addCat } = useCat();
