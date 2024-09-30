@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const CatCard = ({ breed, image, country }) => {
+const CatCard = React.memo(({ breed, image, country }) => {
   console.log('CatCard rendered!');
   return (
     <div className="cat-card">
@@ -10,6 +10,6 @@ const CatCard = ({ breed, image, country }) => {
       <p>{country}</p>
     </div>
   );
-};
+});
 
 export default CatCard;

@@ -1,6 +1,5 @@
 import React, { createContext, useMemo, useState, useEffect } from "react";
 
-// Cats list images
 import siameseImage from "../assets/images/siamese.avif";
 import persianImage from "../assets/images/persian.avif";
 import maineCoonImage from "../assets/images/maine_coon.avif";
@@ -45,7 +44,6 @@ export const CatProvider = ({ children }) => {
       image: bengalImage,
       country: "USA",
     },
-
     {
       breed: "British Shorthair",
       image: britishShorthairImage,

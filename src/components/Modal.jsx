@@ -1,6 +1,13 @@
 import React from "react";
 
-const Modal = ({ isOpen, onClose, form, setForm, handleImageChange, handleSubmit }) => {
+const Modal = ({
+  isOpen,
+  onClose,
+  form,
+  setForm,
+  handleImageChange,
+  handleSubmit,
+}) => {
   if (!isOpen) return null;
 
   console.log("Modal rendered!");
@@ -13,19 +20,28 @@ const Modal = ({ isOpen, onClose, form, setForm, handleImageChange, handleSubmit
           <input
             type="text"
             placeholder="Breed"
+            required
             value={form.breed}
             onChange={(e) => setForm({ ...form, breed: e.target.value })}
           />
-          <input type="file" accept="image/*" onChange={handleImageChange} />
+          <input
+            type="file"
+            accept="image/*"
+            required
+            onChange={handleImageChange}
+          />
           <input
             type="text"
             placeholder="Country"
+            required
             value={form.country}
             onChange={(e) => setForm({ ...form, country: e.target.value })}
           />
           <div className="modal__buttons-group">
             <button type="submit">Add Cat</button>
-            <button type="button" onClick={onClose}>Close</button>
+            <button type="button" onClick={onClose}>
+              Close
+            </button>
           </div>
         </form>
       </div>
