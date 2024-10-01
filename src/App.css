@@ -18,15 +18,17 @@
   --modal-bg: rgba(50, 50, 50, 0.8);
 }
 
-body {
+.app-wrapper {
   background-color: var(--background-color);
+  height: 100vh;
+}
+
+body {
   color: var(--text-color);
   font-family: "Arial", sans-serif;
   line-height: 1.5;
   transition: background-color 0.3s, color 0.3s;
-  height: 100%;
   margin: 0;
-  height: 100vh;
 }
 
 header {
