@@ -1,8 +1,7 @@
-import React from 'react';
-
+import React from "react";
 
 const CatCard = React.memo(({ breed, image, country }) => {
-  console.log('CatCard rendered!');
+  console.log("CatCard rendered!");
   return (
     <div className="cat-card">
       <img src={image} alt={breed} />
