@@ -1,5 +1,5 @@
-import { useContext, useState } from 'react';
-import { CatContext } from '../context/CatContext';
+import { useState } from "react";
+
 import maineCoonImage from "../assets/images/maine_coon.avif";
 import siameseImage from "../assets/images/siamese.avif";
 
@@ -63,7 +63,6 @@ const useCatList = () => {
       id: `${cat.breed.toLowerCase()}-${Date.now()}`,
     };
     setCats((prevCats) => [...prevCats, newCatWithId]);
-
   };
 
   return { cats, addCat };

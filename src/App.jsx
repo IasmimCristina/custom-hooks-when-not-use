@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "./context/ThemeContext";
-import { CatProvider } from "./context/CatContext";
+
 import Header from "./components/Header";
 import { TotallyDifferentCatList, CatList } from "./components/CatList";
 import Modal from "./components/Modal";
@@ -14,15 +14,12 @@ const App = () => {
   return (
     <ThemeProvider>
       <AppWrapper>
-        <CatProvider>
-          <Header />
-          <Main>
-            {/* <button onClick={() => setIsModalOpen(true)}>Add Cat</button> */}
-            <CatList />
-            <TotallyDifferentCatList />
-            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-          </Main>
-        </CatProvider>
+        <Header />
+        <Main>
+          <CatList />
+          <TotallyDifferentCatList />
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        </Main>
       </AppWrapper>
     </ThemeProvider>
   );
