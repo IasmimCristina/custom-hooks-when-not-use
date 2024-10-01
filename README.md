@@ -1,6 +1,8 @@
+# Application with a hands on example of how to avoid custom hooks problems
+
 ![custom_hooks](https://github.com/user-attachments/assets/a45d9398-f296-4c53-8508-f32a6cf35f3e)
 
-# Application with a hands on example of how to avoid custom hooks problems
+
 
 ## Application
 
