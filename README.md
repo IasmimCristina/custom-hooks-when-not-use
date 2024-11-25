@@ -10,7 +10,7 @@
 2. This repository envisions to show how to deal with unwished and problematic re-renders in a React application. Those tips should not be used always since memoization might also harm your app. Use it wisely and read the blog post for more information.
 
 - Read my blog post here: [To be added.]
-- The deployed version here: [To de added.]
+- The deployed version here: https://custom-hooks-when-not-use.vercel.app/
 
 ### Branches features
 
