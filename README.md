@@ -1,7 +1,1 @@
-# Application with practical example of how to avoid cusotm hooks problems;
-
-## Application
-
-1. It's a cats list app with an option of adding new cats saved in local storage. There's also a toggle for dark and light mode.
-
-- It's related to my blogpost: [To be added]
+# 2.  Branch - `feat/cats-list-no-context:` application without `useContext` for cats list.
