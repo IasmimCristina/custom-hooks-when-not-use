@@ -4,19 +4,17 @@ import CatCard from "./CatCard";
 import bengalImage from "../assets/images/bengal.avif";
 import russianBlueImage from "../assets/images/russian_blue.avif";
 
-
 const CatList = () => {
   const { cats, addCat } = useCatList();
-  const hasAddedCats = useRef(false); 
-  // useRef to control if the cats are already added
 
   useEffect(() => {
-    if (!hasAddedCats.current) {
-      addCat({ breed: "Bengal", image: bengalImage, country: "USA" });
-      addCat({ breed: "Russian Blue", image: russianBlueImage, country: "Russia" });
-      hasAddedCats.current = true; 
-    }
-  }, [addCat]); 
+    addCat({ breed: "Bengal", image: bengalImage, country: "USA" });
+    addCat({
+      breed: "Russian Blue",
+      image: russianBlueImage,
+      country: "Russia",
+    });
+  }, []);
   return (
     <div className="cat-list">
       <h2>First list</h2>
