@@ -9,9 +9,9 @@
 1. It's a cats list app with an option of adding new cats saved in local storage. There's also a toggle for dark and light mode.
 2. This repository envisions to show how to deal with unwished and problematic re-renders in a React application. Those tips should not be used always since memoization might also harm your app. Use it wisely and read the blog post for more information.
 
-- Read my blog post here: [To be added.]
-- The deployed version here: https://custom-hooks-when-not-use.vercel.app/
-
+- Read my blog post here: [Custom Hooks possible issues: how to avoid them](https://blog.codeminer42.com/custom-hooks-problems/)
+- The deployed version here: [Deployed version](https://custom-hooks-when-not-use.vercel.app/
+)
 ### Branches features
 
 1.  `feat/cat-app-not-using-use-ref:` two cat lists that share context. The first list always add two cats every render. (Not using useRef.) [With context]
