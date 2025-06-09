@@ -19,13 +19,6 @@ export const ThemeProvider = ({ children }) => {
     [theme]
   );
 
-  const value = useMemo(
-    () => ({
-      theme,
-      toggleTheme,
-    }),
-    [theme]
-  );
   return (
     <ThemeContext.Provider value={value}>
       <div className={theme}>{children}</div>

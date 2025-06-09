@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import useCatList from "../hooks/useCatList";
 
-const Modal = ({
-  isOpen,
-  onClose,
-  form,
-  setForm,
-  handleImageChange,
-  handleSubmit,
-}) => {
+const Modal = ({ isOpen, onClose }) => {
+  const { addCat } = useCatList();
+  const [form, setForm] = useState({ breed: "", image: "", country: "" });
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setForm({ ...form, image: reader.result });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addCat(form);
+    onClose();
+  };
+
   if (!isOpen) return null;
 
-  console.log("Modal rendered!");
-
+    console.log("Modal rendered!");
   return (
     <div className="modal">
       <div className="modal-content">
