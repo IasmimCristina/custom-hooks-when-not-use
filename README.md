@@ -8,4 +8,4 @@
 
 1. It's a cats list app with an option of adding new cats saved in local storage. There's also a toggle for dark and light mode.
 
-- It's related to my blogpost: [To be added]
+- This branch containes the components with console.logs in order to better understand when they re-render.
