@@ -16,7 +16,7 @@
 
 1.  `feat/cat-app-not-using-use-ref:` two cat lists that share context. The first list always add two cats every render. (Not using useRef.) [With context]
 
-1.2  `feat/cat-app-introduction:` two cat lists that share context. The first list always add two cats every render. [With context] (Using ref)
+1.2  `feat/cat-app-with-use-ref:` two cat lists that share context. The first list always add two cats every render. [With context] (Using ref)
 
 2.  `feat/cats-list-no-context:` application without `useContext` for cats list.
 
@@ -26,6 +26,6 @@
 
 3.2  `feat/theme-toggle-button:` application with a theme toggle button component to prevent the re-render of our Header component.
 
-4. `feat/cat-app-inifinite-re-renders:` version without `useCallback`, but using `React.memo()` and `useMemo`.
+4. `feat/react-memo:` version without `useCallback`, but using `React.memo()` and `useMemo`.
 
-5.  `feat/chained-hooks:` final version with state componentization and memoization.
+5.  `feat/final-version-memoization:` final version with state componentization and memoization.
