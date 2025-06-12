@@ -22,6 +22,6 @@
 
 3. `feat/initial-console-logs:` application with modal and toggle theme with console.logs before any memoization or refactor to decrease re-renders. 
 
-4. `feat/cat-app-inifinite-re-renders:` version without `useCalback`, but using `React.memo()` and `useMemo`.
+4. `feat/cat-app-inifinite-re-renders:` version without `useCallback`, but using `React.memo()` and `useMemo`.
 
 5.  `feat/chained-hooks:` final version with state componentization and memoization.
