@@ -8,4 +8,4 @@
 
 1. It's a cats list app with an option of adding new cats saved in local storage. There's also a toggle for dark and light mode.
 
-- This branch contains the modal wrapper component which prevents some unnecessary re-renders in the application.
+- This branch contains the toggle theme button which prevents some unnecessary re-renders in our Header component.
