@@ -22,6 +22,10 @@
 
 3. `feat/initial-console-logs:` application with modal and toggle theme with console.logs before any memoization or refactor to decrease re-renders. 
 
+3.1  `feat/modal-wrapper:` application with modal wrapper to prevent some unnecessary re-renders.
+
+3.2  `feat/theme-toggle-button:` application with a theme toggle button component to prevent the re-render of our Header component.
+
 4. `feat/cat-app-inifinite-re-renders:` version without `useCallback`, but using `React.memo()` and `useMemo`.
 
 5.  `feat/chained-hooks:` final version with state componentization and memoization.
