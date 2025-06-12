@@ -8,4 +8,4 @@
 
 1. It's a cats list app with an option of adding new cats saved in local storage. There's also a toggle for dark and light mode.
 
-- This branch contains the components with console.logs in order to better understand when they re-render.
+- This branch contains the modal wrapper component which prevents some unnecessary re-renders in the application.
